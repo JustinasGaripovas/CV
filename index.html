@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>P5 vector test</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js" integrity="sha256-a6uP+lfJTznPH4/eUqQFX3/sULwjHbfGtUjy8CWPooI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.sound.min.js" integrity="sha256-GdlroanCXFgv0ILaTQ1v0qnNxc+FQNjjXADWxmtr7PM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.js" integrity="sha256-pyMBGYQlTVb2TWLjzcv65PMcv0TADP8ME149Z+wDhFg=" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="javascript/svg-animation.js"></script>
+    <script src="javascript/bounds.js"></script>
+    <script src="javascript/sketch.js"></script>
+    <script src="javascript/greeting.js"></script>
+
+  </head>
+  <body>
+    <div class="full-height">
+      <div class="outer">
+        <div class="middle">
+          <div class="header-text inner">
+            <h1 class="text-center">Justinas Garipovas</h1>
+            <p class="text-center">Personal website</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid p-0 m-0">
+      <div class="mx-5 px-md-4 px-lg-5 row">
+        <div class="col-12 text-center d-none d-xl-block py-5 p-2">
+          <h1>Introduction</h1>
+          <hr>
+        </div>
+        <div id="container_0" class="col-xl-6 row-fluid py-5 p-2 text-center align-items-center">
+            <div class="col-12 text-center d-xl-none">
+              <h1>Short Introduction</h1>
+              <hr>
+            </div>
+            <div class="row col-12 p-3">
+              <div class="col-sm-12 col-md-6 offset-xl-2 col-xl-10 text-center">
+                <div class="mb-3">
+                  <img id="profile" src="other/profile.png" alt="icon">
+                </div>
+              </div>
+              <div class="col-md-6 offset-xl-2 col-xl-10">
+                  <div class="ml-2 text-center pt-3">
+                    <p><span class="day-message font-weight-bold"></span> to everyone. My name is Justin <span class="text-muted">(As you saw in the title page)</span> and I am a passionate developer that hopes to create new meaningful systems which would help others and push me forward as a professional developer. This website is built with that purpose in mind. To find that place where my ideas and talent can both shine and grow while bringing benefits to everyone.</p>
+                  </div>
+              </div>
+            </div>
+        </div>
+
+        <div id="container_1" class="col-xl-6 row-fluid py-5 p-2">
+          <div class="col-12 d-xl-none text-center">
+            <h1>Skill evaluation</h1>
+            <hr>
+          </div>
+          <div class="row col-12 m-0">
+            <div class="col-md-2 px-2 col-xl-4 col-sm-4 text-center">
+              <div class="cont" data-pct="4.5">
+                <svg class="svg" width="120" height="120"
+                 viewPort="0 0 50 50"
+                 version="1.1"
+                 xmlns="http://www.w3.org/2000/svg">
+
+                 <linearGradient id="gradient" x1=0% y1=30%>
+                   <stop offset=0% stop-color=#ADFF2F >
+                       <animate id=a5 attributeName="stop-color" values="#2e2777; #2054a0" begin="0; a8.end" dur="0.5s" />
+                       <animate id=a6 attributeName="stop-color" values="#2054a0; #1c98cd" begin="a5.end" dur="2s" />
+                       <animate id=a7 attributeName="stop-color" values="#1c98cd; #2054a0" begin="a6.end" dur="2s" />
+                       <animate id=a8 attributeName="stop-color" values="#2054a0; #2e2777" begin="a7.end" dur="0.5s" />
+                   </stop>
+               </linearGradient>
+
+               <circle r="45" cx="60" cy="60" stroke="#ddd"fill="transparent" stroke-dasharray="314.15" stroke-dashoffset="0"></circle>
+               <circle r="45" cx="60" cy="60" stroke=url(#gradient) fill="transparent" stroke-dasharray="314.15" stroke-dashoffset="70"  ></circle>
+               <circle r="45" cx="60" cy="60" fill="#f9fbfb" ></circle>
+
+                </svg>
+              </div>
+              <p>OOP<br>(C#, C++, Java)</p>
+            </div>
+            <div class="col-md-2 pb-4 px-2 col-xl-4 col-sm-4 text-center">
+              <div class="cont" data-pct="1">
+                <svg class="svg" width="120" height="120"
+                 viewPort="0 0 50 50"
+                 version="1.1"
+                 xmlns="http://www.w3.org/2000/svg">
+                  <circle r="45" cx="60" cy="60" stroke="#ddd"fill="transparent" stroke-dasharray="314.15" stroke-dashoffset="0"></circle>
+                  <circle r="45" cx="60" cy="60" stroke=url(#gradient) fill="transparent" stroke-dasharray="314.15" stroke-dashoffset="80"></circle>
+                  <circle r="45" cx="60" cy="60" fill="#f9fbfb" stroke-dasharray="314.15" stroke-dashoffset="0"  ></circle>
+
+                </svg>
+              </div>
+              <p>Project managment<br>(CI, Agile, Scrum)</p>
+            </div>
+            <div class="col-md-2 pb-4 px-2 col-xl-4 col-sm-4 text-center">
+              <div class="cont" data-pct="1.5">
+                <svg class="svg" width="120" height="120"
+                 viewPort="0 0 50 50"
+                 version="1.1"
+                 xmlns="http://www.w3.org/2000/svg">
+                 <circle r="45" cx="60" cy="60" stroke="#ddd"fill="transparent" stroke-dasharray="314.15" stroke-dashoffset="0"></circle>
+                 <circle r="45" cx="60" cy="60" stroke=url(#gradient) fill="transparent" stroke-dasharray="314.15" stroke-dashoffset="76"></circle>
+                 <circle r="45" cx="60" cy="60" fill="#f9fbfb" stroke-dasharray="314.15" stroke-dashoffset="0"  ></circle>
+
+                </svg>
+              </div>
+              <p>Web design<br>(html, css, bootstrap, sass)</p>
+
+            </div>
+            <div class="col-md-2 pb-5 px-2 col-xl-4 col-sm-4 text-center">
+              <div class="cont" data-pct="1.5">
+                <svg class="svg" width="120" height="120"
+                 viewPort="0 0 50 50"
+                 version="1.1"
+                 xmlns="http://www.w3.org/2000/svg">
+                 <circle r="45" cx="60" cy="60" stroke="#ddd"fill="transparent" stroke-dasharray="314.15" stroke-dashoffset="0"></circle>
+                 <circle r="45" cx="60" cy="60" stroke=url(#gradient) fill="transparent" stroke-dasharray="314.15" stroke-dashoffset="113"></circle>
+                 <circle r="45" cx="60" cy="60" fill="#f9fbfb" stroke-dasharray="314.15" stroke-dashoffset="0"  ></circle>
+
+                </svg>
+              </div>
+              <p>Front-End<br>(jQuery, Javascript, React)</p>
+            </div>
+            <div class="col-md-2 pb-4 px-2 col-xl-4 col-sm-4 text-center">
+              <div class="cont" data-pct="1">
+                <svg class="svg" width="120" height="120"
+                 viewPort="0 0 50 50"
+                 version="1.1"
+                 xmlns="http://www.w3.org/2000/svg">
+
+                 <circle r="45" cx="60" cy="60" stroke="#ddd"fill="transparent" stroke-dasharray="314.15" stroke-dashoffset="0"></circle>
+                 <circle r="45" cx="60" cy="60" stroke=url(#gradient) fill="transparent" stroke-dasharray="314.15" stroke-dashoffset="49"></circle>
+                 <circle r="45" cx="60" cy="60" fill="#f9fbfb" stroke-dasharray="314.15" stroke-dashoffset="0"></circle>
+
+                </svg>
+              </div>
+              <p>Framework<br>(Symfony4)</p>
+            </div>
+            <div class="col-md-2 pb-4 px-2 col-xl-4 col-sm-4 text-center">
+              <div class="cont" data-pct="1.5">
+                <svg class="svg" width="120" height="120"
+                 viewPort="0 0 50 50"
+                 version="1.1"
+                 xmlns="http://www.w3.org/2000/svg">
+
+                 <circle r="45" cx="60" cy="60" stroke="#ddd"fill="transparent" stroke-dasharray="314.15" stroke-dashoffset="0"></circle>
+                 <circle r="45" cx="60" cy="60" stroke=url(#gradient) fill="transparent" stroke-dasharray="314.15" stroke-dashoffset="71"></circle>
+                 <circle r="45" cx="60" cy="60" fill="#f9fbfb" stroke-dasharray="314.15" stroke-dashoffset="0"></circle>
+
+                </svg>
+              </div>
+              <p>Database managment<br>(MySQL, DQL, ORM)</p>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="container_2" class="col-xl-12 row-fluid py-5 p-2">
+          <div class="col-12 text-center">
+            <h1>Personal Values</h1>
+            <hr>
+          </div>
+          <div class="row col-12 p-3">
+            <div class="col-md-4 text-center">
+              <h2 class="p-2">Improvement</h2>
+              <img class="bounce" style="height: 250px; width: 250px;" src="svg/person_2.svg" />
+              <p>
+          
+
+                Let's start from Improvement (beforementioned wish to grow). In my opinion the most important value for each and every developer or professional of their craft. Constant wish to better yourself, discover something new and exciting is the essence of my character. 
+              </p>
+            </div>
+            <div class="col-md-4 text-center">
+              <h2 class="p-2">Optimization</h2>
+              <img class="swing" style="height: 250px; width: 250px;" src="svg/person_1.svg" />
+              <p>Optimization, if that could be called value is highly underestimated. In my worldview, doing something more efficiently with less energy wasted is the goal. The goal that everyone should strive to achieve. From extensive use of shortcuts when developing, to basic rules when cleaning your room. Having a mindset with optimization at its core brought more satisfying living style. </h1>
+            </div>
+            <div class="col-md-4 text-center">
+              <h2 class="p-2">Teamwork</h2>
+              <img class="shake" style="height: 250px; width: 250px;" src="svg/person_3.svg" />
+              <p>Teamwork, connections between people, finding the right, like-minded group of coworkers is the key to successful working experience. My ideal working environment is where you give and receive a helping hand, where there is a sense of promoting and pushing each other's skills and ideas, not ignoring them or dragging them through the mud.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="container_3" class="col-xl-12 row-fluid py-5 p-2">
+          <div class="dates row col-12 p-3 text-center">
+            <div class="col-md-6" >
+              <h2 class="p-2 mb-2">Projects</h2>
+              <hr>
+              <p style="color: green;"> 2016-2017</p>
+              <p>"Papludimio kovos" a multiplayer, 1 versus 1, tower defense and strategy game. <br><a href="http://www.mediafire.com/file/66l6215bs9encic/Papl%C5%ABdimioKovosV0.2.zip">Download</a></p>
+              <hr>
+              <p style="color: green;"> 2018</p>
+              <p>Online store "Remgeta.lt". Online store created for "MB Remgeta", mainly to sell machinery parts around Lithuania. Site was created solely by me starting from getting hosting, ending with design.
+                  <a href="https://remgeta.lt/">Remgera.lt</a> (currently site is fully functional, but unused)
+              </p>
+              <hr>
+              <p style="color: green;"> 2018-2019</p>
+              <p>University project in collaboration with <a href="https://data.dog/">Datadog</a> online website to manage university events made with Symfony4 <br> <a href="https://github.com/JustinasGaripovas/DataDogProject">Repository</a></p>
+            </div>
+            <div class="col-md-6 text-center">
+              <h2 class="p-2 mb-2">Education</h2>
+              <hr>
+              <p style="color: green;"> 2013-2017</p>
+              <p>High school "Antano smetonos gimnazija"</p>
+              <hr>
+              <p style="color: green;"> 2016-2017</p>
+              <p>Junior programmer school "Jaunųjų kompiuterininkų mokykla" <a href="https://jkm.ktu.edu/">JKM</a> (C++ course) </p>
+              <hr>
+              <p style="color: green;"> 2017-current</p>
+              <p>University "Kaunas University of technology" <a href="https://admissions.ktu.edu/programme/b-software-systems/">software systems</a> (government financed, daily)</p>
+              <hr>
+              </div>
+          </div>
+        </div>
+
+        <div id="container_4" class="col-xl-12 row py-5 my-5 mx-0 p-2" style="background: #1c1e1f">
+          <div class="col-md-6">
+            <img class="mail float-md-right float-sm-none float-xs-none" style="height: 250px; width: 250px;display: table; margin: 0 auto" src="svg/person_4.svg" />
+          </div>
+          <div class=" col-md-6 text-md-left text-sm-center text-xs-center" style="background: #1c1e1f; color: white">
+            <div class="m-2 p-3" style="border: solid white 1px;display: inline-block">
+                <h1>Get in touch</h1>
+                <p>Email:</p>
+                <p>justinas.garipovas@gmail.com</p>
+                <br>
+                <p>Phone:</p>
+                <p>+3702645658</p>
+            </div>
+          </div>
+          <div class="col-12 p-3" style="background: #1c1e1f">
+            <code class="p-2" style="color: white; display: table; margin: 0 auto;">
+              <span class="code_additions">if</span>(<span class="code_class">Visitor</span>.haveQuestions == <span class="code_additions">true</span>)<br>
+              {<br>
+                 &nbsp&nbsp&nbsp&nbsp<span class="code_class">Mail</span>.from = <span class="code_string">"INSERT YOUR EMAIL"</span>;<br>
+                 &nbsp&nbsp&nbsp&nbsp<span class="code_class">Mail</span>.to = <span class="code_string">"justinas.garipovas@gmail.com"</span>;<br>
+                 &nbsp&nbsp&nbsp&nbsp<span class="code_class">Mail</span>.subject = <span class="code_class">Console</span>.ReadLine();<br>
+                 &nbsp&nbsp&nbsp&nbsp<span class="code_class">Mail</span>.Send();<br>
+              }<br>
+              <span class="code_additions">else</span><br>
+              {<br>
+                 &nbsp&nbsp&nbsp&nbsp<span class="code_class">Console</span>.WriteLine( <span class="code_string">"Thanks for visiting. :)"</span> );<br>
+              }<br>
+            </code>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <!-- SVG ICON  -->
+
+      <svg style="opacity: 0.8;" width="200" height="200" version="1.1" id="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      	 viewBox="0 0 1971.78 2341.26" style="enable-background:new 0 0 1971.78 2341.26;" xml:space="preserve">
+      <style type="text/css">
+      	.st0{fill:#FFFFFF;stroke:#382f91;stroke-width:44.1808;stroke-miterlimit:10;}
+      	.st1{fill:none;stroke:#2663bc;stroke-width:44.1808;stroke-miterlimit:10;}
+      	.st2{fill:none;stroke:#29abe2;stroke-width:44.1808;stroke-miterlimit:10;}
+        .st3{fill:#FFFFFF;}
+      </style>
+      <line class="st0" x1="936.95" y1="15.62" x2="1956.16" y2="1034.83"/>
+      <line class="st0" x1="1940.54" y1="1019.26" x2="921.33" y2="2038.47"/>
+      <line class="st1" x1="936.95" y1="159.21" x2="1956.16" y2="1178.42"/>
+      <line class="st1" x1="1940.54" y1="1162.84" x2="921.33" y2="2182.06"/>
+      <line class="st2" x1="936.95" y1="302.8" x2="1956.16" y2="1322.01"/>
+      <line class="st2" x1="1940.54" y1="1306.43" x2="921.33" y2="2325.64"/>
+      <line class="st0" x1="1034.83" y1="2325.64" x2="15.62" y2="1306.43"/>
+      <line class="st0" x1="31.24" y1="1322.01" x2="1050.45" y2="302.8"/>
+      <line class="st1" x1="1034.83" y1="2182.06" x2="15.62" y2="1162.84"/>
+      <line class="st1" x1="31.24" y1="1178.42" x2="1050.45" y2="159.21"/>
+      <line class="st2" x1="1034.83" y1="2038.47" x2="15.62" y2="1019.26"/>
+      <line class="st2" x1="31.24" y1="1034.83" x2="1050.45" y2="15.62"/>
+      <path class="st3" d="M1223.49,997.71v-3.92c0-6.49-3.26-9.74-9.74-9.74H994.6c-6.49,0-9.74,3.25-9.74,9.74v77.91c0,6.5,3.25,9.74,9.74,9.74
+      	h109.09c3.9,0,5.84,1.95,5.84,5.84c0,18.84-0.97,35.23-2.92,49.19c-1.95,13.97-4.55,26.14-7.79,36.52
+      	c-9.1,27.27-25.01,47.89-47.73,61.85c-22.73,13.98-48.7,20.94-77.91,20.94c-33.77,0-60.72-7.62-80.84-22.89
+      	c-20.14-15.25-34.75-36.52-43.83-63.79c-1.95-5.84-3.74-12.66-5.36-20.45c-1.62-7.79-2.92-17.53-3.9-29.23
+      	c-0.97-11.69-1.62-25.81-1.95-42.37c-0.33-16.56-0.49-36.52-0.49-59.9c0-23.37,0.15-43.35,0.49-59.9
+      	c0.32-16.56,0.97-30.68,1.95-42.37c0.97-11.69,2.27-21.43,3.9-29.22c1.62-7.79,3.41-14.61,5.36-20.45
+      	c9.08-27.27,23.69-48.53,43.83-63.8c20.11-15.24,47.07-22.89,80.84-22.89c32.46,0,59.08,6.99,79.86,20.94
+      	c20.78,13.98,38.63,34.26,53.57,60.88c2.59,5.2,6.82,6.82,12.66,4.87l81.82-36.04c5.19-3.25,6.48-7.8,3.9-13.64
+      	c-7.16-18.16-17.21-35.87-30.19-53.08c-13-17.2-29.23-32.14-48.7-44.8c-19.48-12.67-41.88-22.89-67.21-30.68
+      	c-25.32-7.79-53.57-11.69-84.73-11.69c-59.09,0-109.08,13.48-149.99,40.42c-40.91,26.95-69.81,66.71-86.69,119.32
+      	c-3.25,10.39-6.01,20.79-8.27,31.17c-2.29,10.4-4.07,22.4-5.36,36.04c-1.31,13.64-2.28,29.71-2.92,48.21
+      	c-0.65,18.5-0.97,40.76-0.97,66.72c0,25.98,0.32,48.21,0.97,66.71c0.64,18.5,1.62,34.57,2.92,48.22c1.3,13.64,3.08,25.65,5.36,36.04
+      	c2.26,10.4,5.02,20.79,8.27,31.17c16.88,52.59,45.78,92.38,86.69,119.31c40.91,26.95,90.9,40.42,149.99,40.42
+      	c52.14,0,97.59-11.91,136.51-35.44v110.38c0,43.5-9.58,76.14-28.73,97.88c-19.16,21.77-46.26,32.63-81.32,32.63
+      	c-19.49,0-37.02-4.38-52.6-13.15c-15.58-8.77-27.6-18.02-36.04-27.76c-4.54-5.19-9.41-6.16-14.61-2.92l-71.1,53.57
+      	c-4.55,3.9-5.2,8.45-1.95,13.64c14.93,22.08,37.98,40.91,69.15,56.49c31.17,15.58,65.58,23.37,103.25,23.37
+      	c70.12,0,125.79-20.12,167.04-60.38c41.22-40.26,58.36-98.04,58.36-173.37C1222.1,1433.97,1224.82,999.32,1223.49,997.71z"/>
+      </svg>
+
+      <!-- END SVG ICON -->
+  </body>
+</html>

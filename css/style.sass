@@ -1,0 +1,237 @@
+@import "progress_circle"
+
+$light-base-color: #e5eef6
+$light-base-color-transparent: rgba(229, 238, 246, 0.5)
+$breakpoints: (phone: 320px, tablet: 768px, desktop: 1024px)
+
+$tablet-width: 768px
+$desktop-width: 1024px
+$phone-width: 600px
+$large-desktop-width: 1200px
+
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
+@mixin phone
+  @media (max-width: #{$phone-width - 1px})
+    @content
+
+@mixin tablet
+  @media (min-width: #{$phone-width }) and (max-width: #{$tablet-width - 1px})
+    @content
+
+@mixin desktop
+  @media (min-width: #{$tablet-width }) and (max-width: #{$large-desktop-width - 1px})
+    @content
+
+@mixin large-desktop
+  @media (min-width: #{$large-desktop-width })
+    @content
+
+@mixin text-shadow($color, $size)
+  text-shadow: $size*2 $size*2 0 $color,$size*-1 $size*-1 0 $color,$size $size*-1 0 $color,$size*-1 $size 0 $color,$size $size 0 $color
+
+@mixin media-sizes($h1_size, $p_size, $profile_size)
+  .header-text
+    h1
+      font-size: $h1_size
+    p
+      font-size: $p_size
+  #profile
+    width: $profile_size
+    height: $profile_size
+
+@include phone
+  @include media-sizes(8vw, 3.5vw, 260px)
+  #container_0
+    background: white
+  #container_contacts
+    width: 100%
+    h1
+      font-size: 25px
+    p
+      font-size: 16px
+
+@include tablet
+  @include media-sizes(8vw, 3.5vw, 250px)
+  #container_0
+    background: white
+  #container_contacts
+    width: 100%
+    h1
+      font-size: 4vw
+    p
+      font-size: 2vw
+
+@include desktop
+  @include media-sizes(80px, 35px, 300px)
+  #container_0
+    background: white
+  #container_contacts
+    h1
+      font-size: 2vw
+    p
+      font-size: 1.2vw
+
+@include large-desktop
+  @include media-sizes(80px, 35px, 300px)
+  #container_0
+    background: $light-base-color
+  #container_contacts
+    h1
+      font-size: 2vw
+    p
+      font-size: 1.2vw
+
+#container_1, #container_3
+  background: $light-base-color
+#container_2
+  background: white
+
+.dates
+  hr
+    width: 100%
+    margin: 10px 0 10px 0
+
+
+.full-height
+  padding-top: 100vh
+
+body
+  font-family: 'Poppins', sans-serif
+  overflow-x: hidden
+
+hr
+  width: 50vw
+  border-top: 1px solid #382F91
+
+.outer
+  display: table
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+
+.middle
+  display: table-cell
+  vertical-align: middle
+
+.inner
+  margin-left: auto
+  margin-right: auto
+
+.header-text
+  color: white
+  @include text-shadow(#333, 2px)
+  h1
+    padding: 0px
+    margin: 5px
+    display: none
+    font-weight: 700
+  p
+    font-weight: 700
+    padding: 0px
+    margin: 5px
+    display: none
+
+#icon
+  position: absolute
+  left: 0
+  top: 0
+  z-index: -1
+  padding: 10px 10px 10px 10px
+
+#canvas
+ position: absolute
+ left: 0
+ top: 0
+ z-index: -2
+
+#profile
+ border-radius: 50%
+ filter: grayscale(20%)
+ background: linear-gradient(#ccc,#ccc) padding-box, linear-gradient(to right, #382F91, #29ABE2) border-box
+ border: 8px solid transparent
+
+#container_contacts_parent
+  position: relative
+  width: 100%
+  height: 100%
+
+#container_video
+  z-index: -1
+
+#container_contacts
+  position: absolute
+  color: black
+  top: 50%
+  left: 50%
+  color: white
+  transform: translate(-50%,-50%)
+  overflow: auto
+  h1
+    @include text-shadow(#333, 1px)
+
+.code_class
+  color: #48c6b0
+.code_string
+  color: #e5d660
+.code_additions
+  color: #6890c8
+
+video
+  -webkit-filter: grayscale(100%)
+  filter: grayscale(70%) blur(3px)
+
+@mixin animation($name, $duration, $origin)
+  animation: $name ease-in-out $duration infinite alternate
+  transform-origin: center $origin
+
+.swing
+    @include animation(swing,1s,-20px)
+
+.bounce
+    @include animation(bounce,1s,-20px)
+
+.shake
+    @include animation(shake,1s,-20px)
+
+.mail
+  @include animation(mail,0.5s,200px)
+
+
++keyframes(mail)
+  0%
+    transform: scale(0.9) rotate(3deg)
+  100%
+    transform: scale(1) rotate(-3deg)
+
++keyframes(bounce)
+  0%
+    transform: translateY(0)
+  50%
+    transform: translateY(-6px)
+  100%
+    transform: translateY(0)
+
++keyframes(shake)
+  0%
+    transform: translateX(0)
+  50%
+    transform: translateX(-6px)
+  100%
+    transform: translateX(0)
+
++keyframes(swing)
+  0%
+    transform: rotate(2deg)
+  100%
+    transform: rotate(-2deg)
